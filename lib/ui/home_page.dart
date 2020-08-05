@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:lista_contatos/help/contact_help.dart';
 import 'package:lista_contatos/ui/contact_page.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -114,7 +115,10 @@ class _HomePageState extends State<HomePage> {
                           "Ligar",
                           style: TextStyle(color: Colors.orange, fontSize: 20),
                         ),
-                        onPressed: () {},
+                        onPressed: () {
+                          launch("tel:${contacts[index].phone}");
+                          Navigator.pop(context);
+                        },
                       ),
                     ),
                     Padding(
