@@ -26,7 +26,8 @@ class ContactHelper {
 
   Future<Database> initDb() async {
     final databasesPath = await getDatabasesPath();
-    final path = join(databasesPath, "contacts.db");  //verificar nome do db caso ocorra algum erro
+    final path = join(databasesPath,
+        "contacts.db"); //verificar nome do db caso ocorra algum erro
 
     return await openDatabase(path, version: 1,
         onCreate: (Database db, int newerVersion) async {
@@ -94,7 +95,6 @@ class Contact {
   String phone;
   String email;
   String image;
-
 
   Contact();
 
