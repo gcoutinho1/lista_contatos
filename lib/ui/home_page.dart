@@ -45,6 +45,7 @@ class _HomePageState extends State<HomePage> {
   Widget _contactCard(BuildContext context, int index) {
     return GestureDetector(
       child: Card(
+        color: Colors.deepOrangeAccent,
         child: Padding(
           padding: EdgeInsets.all(10),
           child: Row(
@@ -73,12 +74,12 @@ class _HomePageState extends State<HomePage> {
                     Text(
                       contacts[index].email ?? "",
                       style: TextStyle(
-                          fontSize: 19, fontWeight: FontWeight.normal),
+                          fontSize: 19),
                     ),
                     Text(
                       contacts[index].phone ?? "",
                       style:
-                          TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
+                          TextStyle(fontSize: 19),
                     ),
                   ],
                 ),
